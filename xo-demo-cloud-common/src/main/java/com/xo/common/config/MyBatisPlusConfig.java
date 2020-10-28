@@ -1,4 +1,4 @@
-package com.xo.web.config;
+package com.xo.common.config;
 
 
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;

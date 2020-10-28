@@ -1,4 +1,4 @@
-package com.xo.web.config;
+package com.xo.common.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;

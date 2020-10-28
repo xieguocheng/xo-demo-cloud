@@ -22,7 +22,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  **/
 @Configuration
 @EnableSwagger2
-@ComponentScan(basePackages = {"com.xo.web.controller"})
+@ComponentScan(basePackages = {"com.xo.web"})
 @EnableSwaggerBootstrapUI
 public class SwaggerConfig {
 

@@ -1,4 +1,4 @@
-package com.xo.web.config.aop;
+package com.xo.common.config.aop;
 
 import com.xo.common.annotation.SendMailAnnotation;
 import com.xo.common.utils.SendMailUtil;
