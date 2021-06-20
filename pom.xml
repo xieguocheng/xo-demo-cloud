@@ -196,7 +196,7 @@
             <dependency>
                 <groupId>commons-beanutils</groupId>
                 <artifactId>commons-beanutils</artifactId>
-                <version>20030211.134440</version>
+                <version>1.8.0</version>
             </dependency>
             <dependency>
                 <groupId>commons-codec</groupId>
@@ -206,7 +206,7 @@
             <dependency>
                 <groupId>commons-collections</groupId>
                 <artifactId>commons-collections</artifactId>
-                <version>20040616</version>
+                <version>3.2.2</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -232,13 +232,13 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>easyexcel</artifactId>
-                <version>2.1.7</version>
+                <version>2.1.4</version>
             </dependency>
             <!--log4j-->
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
-                <version>1.2.14</version>
+                <version>1.2.16</version>
             </dependency>
             <!--    jwt    -->
             <dependency>
@@ -247,6 +247,11 @@
                 <version>3.8.2</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-runtime</artifactId>
+                <version>4.8</version>
+            </dependency>
 
 <!--
 

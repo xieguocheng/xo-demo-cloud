@@ -101,11 +101,12 @@
         </encoder>
     </appender>
 
-    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
-        <queueSize>1024</queueSize>
-        <neverBlock>true</neverBlock>
-        <appender-ref ref="STDOUT"/>
-    </appender>
+<!--    这个日志记录打印一堆东西-->
+<!--     <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">-->
+<!--        <queueSize>1024</queueSize>-->
+<!--        <neverBlock>true</neverBlock>-->
+<!--        <appender-ref ref="STDOUT"/>-->
+<!--    </appender>-->
 
 
     <!--分别设置对应的日志输出节点 -->
@@ -115,7 +116,7 @@
         <appender-ref ref="debug"/>
         <appender-ref ref="info"/>
         <appender-ref ref="warn-error"/>
-        <appender-ref ref="ASYNC"/>
+<!--        <appender-ref ref="ASYNC"/>-->
     </root>
 
 </configuration>

@@ -71,6 +71,11 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
+        <!--antlr4 词法语法解析-->
+        <dependency>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4-runtime</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.quartz-scheduler</groupId>
