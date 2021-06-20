@@ -10,7 +10,7 @@ import java.io.IOException;
 public class DslTest {
 
     public static void main(String[] args) throws IOException {
-        String sql= "Select 'abc' as a, `hahah` as c  From a aS table;";
+        String sql= "Select 'abc' as a, `hahah` as c  From a aS table; ";
         ANTLRInputStream input = new ANTLRInputStream(sql);  //将输入转成antlr的input流
         DslLexer lexer = new DslLexer(input);  //词法分析
         CommonTokenStream tokens = new CommonTokenStream(lexer);  //转成token流
