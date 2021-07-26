@@ -36,7 +36,7 @@ public class Test {
     @org.junit.Test
     public void testReplyToRegistrationRequests() {
         TestKit probe = new TestKit(system);
-        ActorRef deviceActor = system.actorOf(Device.props("group", "device"));
+        ActorRef deviceActor = system.actorOf(Device.props("group", "device"),"first-actor");
         deviceActor.tell(new DeviceManager.RequestTrackDevice("group", "device"), probe.getRef());
         probe.expectMsgClass(DeviceManager.DeviceRegistered.class);
 //        assertEquals(deviceActor, probe.getLastSender());

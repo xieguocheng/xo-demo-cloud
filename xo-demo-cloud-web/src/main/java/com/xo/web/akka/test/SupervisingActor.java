@@ -4,6 +4,7 @@ import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
+import cn.hutool.core.thread.ThreadUtil;
 
 import java.util.Optional;
 
@@ -19,6 +20,7 @@ class SupervisingActor extends AbstractActor {
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("testSystem");
         ActorRef supervisingActor = system.actorOf(SupervisingActor.props(), "supervising-actor");
+        supervisingActor.tell("failChild", ActorRef.noSender());
         supervisingActor.tell("failChild", ActorRef.noSender());
     }
 
@@ -59,10 +61,22 @@ class SupervisedActor extends AbstractActor {
     public void postStop() {
         System.out.println("supervised actor stopped");
     }
+
+    static int  i = 0;
+
     @Override
     public Receive createReceive() {
         return receiveBuilder()
                 .matchEquals("fail", f -> {
+                    i++;
+
+                    if (i % 2 == 0) {
+                        Thread.sleep(2000);
+                        System.out.println("我睡觉了一会" + i);
+                    }else {
+                        Thread.sleep(90000);
+                        System.out.println("我睡觉了一会" + i);
+                    }
                     System.out.println("supervised actor fails now");
                     throw new Exception("I failed!");
                 })
